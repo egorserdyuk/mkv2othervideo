@@ -1,10 +1,10 @@
 import sys
-from PyQt5 import QtWidgets
+from PySide6 import QtWidgets
 
-from ui import design
+from ui import main_window
 
 
-class App(QtWidgets.QMainWindow, design.Ui_MainWindow):  # Initialize the class of UI
+class App(QtWidgets.QMainWindow, main_window.Ui_MainWindow):  # Initialize the class of UI
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -14,7 +14,7 @@ def main():
     app = QtWidgets.QApplication(sys.argv)
     window = App()
     window.show()
-    app.exec_()
+    app.exec()
 
 
 if __name__ == '__main__':
